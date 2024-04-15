@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 13042024</title>
+</head>
+<body>
+    <input type="number" placeholder="Nhập số a" id = "a">
+    <input type="number" placeholder="Nhập số b" id = "b"><br>
+    <button onclick="baitap()">Bài 1</button>
+    <div id ="bai1"></div>
+    <br>
+    <input type="number" placeholder="Nhập tuổi" id = "t"><br>
+    <button onclick="bai2()">Bài 2</button>
+    <div id ="bai2"></div>
+    <br>
+    <input type="number" placeholder="Nhập số nguyên" id = "n"><br>
+    <button onclick="bai3()">Bài 3</button>
+    <div id ="bai3"></div>
+    <br>
+    <input type="number" placeholder="Nhập số nguyên 1" id = "x"><br>
+    <input type="number" placeholder="Nhập số nguyên 2" id = "y"><br>
+    <input type="number" placeholder="Nhập số nguyên 3" id = "z"><br>
+    <button onclick="bai4()">Bài 4</button>
+    <div id ="bai4"></div>
+    <br>
+    <input type="number" placeholder="Nhập điểm kiểm tra" id = "kt"><br>
+    <input type="number" placeholder="Nhập điểm giữa kỳ" id = "gk"><br>
+    <input type="number" placeholder="Nhập điểm cuối kỳ" id = "ck"><br>
+    <button onclick="bai5()">Bài 5</button>
+    <div id ="bai5"></div>
+    <br>
+</body>
+<script>
+    function bai1() {
+        let a = document.getElementById("a").value
+        let b = document.getElementById("b").value
+        if (a % b == 0) {
+            document.getElementById("bai1").innerHTML = "a chia hết cho b"
+        } else {
+            document.getElementById("bai1").innerHTML = "a không chia hết cho b"
+        }
+    }
+    function bai2() {
+        let t = document.getElementById("t").value
+        if (t>=16) {
+            document.getElementById("bai2").innerHTML = "Đủ tuổi vào lớp 10"
+        } else {
+            document.getElementById("bai2").innerHTML = "Chưa đủ tuổi vào lớp 10"
+        }
+    }
+    function bai3() {
+        let n = document.getElementById("n").value
+        if (n>0) {
+            document.getElementById("bai3").innerHTML = "Số nguyên nhập vào lớn hơn 0"
+        }
+        if (n<0) {
+            document.getElementById("bai3").innerHTML = "Số nguyên nhập vào nhỏ hơn 0"
+        }
+        if (n==0) {
+            document.getElementById("bai3").innerHTML = "Số nguyên nhập vào = 0"
+        }
+    }
+    function bai4() {
+        let x = document.getElementById("x").value
+        let y = document.getElementById("y").value
+        let z = document.getElementById("z").value
+        document.getElementById("bai4").innerHTML = "Giá trị lớn nhất = " + Math.max(x,y,z)
+    }
+    function bai5() {
+        let kt = document.getElementById("kt").value
+        let gk = document.getElementById("gk").value
+        let ck = document.getElementById("ck").value
+        let diem = (1 * kt + 2 * gk + 3 * ck) / 6
+        if (diem < 5) {
+            document.getElementById("bai5").innerHTML = "Yếu"
+        }
+        if (diem >= 5 && diem < 8) {
+            document.getElementById("bai5").innerHTML = "Khá"
+        }
+        if (diem >= 8) {
+            document.getElementById("bai5").innerHTML = "Giỏi"
+        }
+    }
+</script>
+</html>
